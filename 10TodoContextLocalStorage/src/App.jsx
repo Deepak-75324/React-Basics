@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import {TodoProvider} from './contexts'
 import './App.css'
-// import TodoForm from './components/TodoForm'
-// import TodoItem from './components/TodoItem'
+import TodoForm from './components/TodoForm'
+import TodoItem from './components/TodoItem'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -55,8 +55,8 @@ function App() {
                     </div>
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
-                        {todos.map((todo) => (
-                          <div key={todo.id}
+                        {todos.map((todo) => ( // map  used for map , {} -> return
+                          <div key={todo.id} // key is used to find unique or not
                           className='w-full'
                           >
                             <TodoItem todo={todo} />
