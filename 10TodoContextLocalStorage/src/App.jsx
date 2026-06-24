@@ -28,7 +28,7 @@ function App() {
       prevTodo.id === id ? { ...prevTodo, 
         completed: !prevTodo.completed } : prevTodo))
   }
-
+// for local storage
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
 
